@@ -113,25 +113,31 @@ export const findUserByEmail = async (req, res) => {
 };
 
 export const changeRole = async (req, res) => {
-            const { idUser } = req.params;
-            try {
-                const user = await findById(idUser);
-                const requiredDocuments = ['dni', 'address', 'bank'];
-                const hasAllDocuments = requiredDocuments.every(doc => uploadedDocuments.includes(doc));
-                if (!hasAllDocuments) {
-                    return res.status(400).json({ message: "All documents must be uploaded to change role to premium" });
-                }
-                user.role = user.role === 'user' ? 'premium' : 'user';
-                const updatedUser = await user.save();
-                res.status(200).json({ message: "User role updated", user: updatedUser });
-            } catch (error) {
-                CustomError.generateError(
-                    ErrorMessages.USER_ROLE_NOT_UPDATED,
-                    500,
-                    ErrorMessages.USER_ROLE_NOT_UPDATED
-                );
-            }
+    const { idUser } = req.params;
+    try {
+        const user = await findById(idUser);
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
+        const requiredDocuments = ['dni', 'address', 'bank'];
+        const uploadedDocuments = user.documents.map(doc => doc.name.toLowerCase());
+        const hasAllDocuments = requiredDocuments.every(doc => uploadedDocuments.includes(doc.toLowerCase()));
+        if (!hasAllDocuments) {
+            return res.status(400).json({ message: "All documents must be uploaded to change role to premium" });
+        }
+        user.role = user.role === 'user' ? 'premium' : 'user';
+        const updatedUser = await user.save();
+        res.status(200).json({ message: "User role updated", user: updatedUser });
+    } catch (error) {
+        console.error("Error changing role:", error);
+        CustomError.generateError(
+            "Can not update the user",
+            500,
+            "Can not update the user"
+        );
+    }
 };
+
 
 export const saveUserDocuments = async (req, res) =>{
     const {idUser} = req.params;
@@ -147,12 +153,8 @@ export const saveUserProfiles = async (req, res) =>{
     res.json({response});
 };
 
-// Assuming findById and usersModel are correctly imported or available
-
 export const logOut = async (req, res) => {
     const { idUser } = req.params;
-    console.log("\n////////////",idUser,"\n////////////");
-
     try {
         const user = await usersModel.findById(idUser);
         if (!user) {

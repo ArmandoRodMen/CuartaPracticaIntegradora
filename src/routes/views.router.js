@@ -59,10 +59,6 @@ router.get("/profile/:idUser", async (req, res) => {
 });
 
 router.get("/profile",(req, res)=>{
-  /*
-  console.log("probando", req);
-  res.render("profile", {user:{first_name:"", username:""}});
-  */
   if (!req.session.passport){
     return res.redirect("/login");
   }
@@ -74,16 +70,8 @@ router.get("/restaurar",(req, res) =>{
   res.render("restaurar");
 });
 
-router.get("/profiles", (req, res)=>{
-  res.render("profiles");
-});
-
 router.get("/documents", (req, res)=>{
   res.render("documents");
-});
-
-router.get("/product", (req, res)=>{
-  res.render("product");
 });
 
 router.post("/restaurar", async (req, res) => {
