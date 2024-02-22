@@ -7,7 +7,8 @@ import {
     updateOne,
     deleteOne,
     saveUserDocumentsService,
-    saveUserProfilesService
+    saveUserProfilesService,
+    saveUserProductsService
 } from "../services/users.services.js";
 import CustomError from "../errors/error.generator.js";
 import { ErrorMessages } from "../errors/errors.enum.js";
@@ -153,3 +154,9 @@ export const saveUserProfiles = async (req, res) =>{
     res.json({response});
 };
 
+export const saveUserProducts = async (req, res) =>{
+    const {idUser} = req.params;
+    const {products} = req.files;
+    const response = await saveUserProductsService({idUser, products});
+    res.json({response});
+};

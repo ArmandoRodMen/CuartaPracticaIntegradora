@@ -71,6 +71,15 @@ const usersSchema = new mongoose.Schema({
         ],
         default: []
     },
+    products: {
+        type: [
+            {
+                name: String,
+                reference: String
+            },
+        ],
+        default: []
+    },
     lastConnection: { 
         type: Date,
         default: Date.now 

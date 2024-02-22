@@ -8,7 +8,8 @@ import {
     findUserByEmail,
     changeRole,
     saveUserDocuments,
-    saveUserProfiles
+    saveUserProfiles,
+    saveUserProducts
 } from "../controllers/users.controller.js";
 import upload from "../middlewares/multer.middleware.js";
 
@@ -35,6 +36,12 @@ router.post("/:idUser/profiles",
         {name: "profiles", maxCount: 1}
     ]), 
     saveUserProfiles
+);
+router.post("/:idUser/products", 
+    upload.fields([
+        {name: "products", maxCount: 3}
+    ]), 
+    saveUserProducts
 );
 
 

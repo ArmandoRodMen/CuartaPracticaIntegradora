@@ -73,3 +73,22 @@ export const saveUserProfilesService = async ({idUser, profiles}) => {
     });
     return saveProfiles;
 };
+
+export const saveUserProductsService = async ({ idUser, products }) => {
+    const id = idUser;
+    const productReferences = products.map(product => ({
+        name: 'product', 
+        reference: product.path 
+    }));
+
+    // Using updateOne instead of findByIdAndUpdate
+    const saveProducts = await usersDao.updateOne(id, {
+        $set: { products: productReferences }
+    });
+
+    // Since updateOne doesn't return the updated document by default,
+    // you might want to fetch the updated user separately if needed.
+    const updatedUser = await usersDao.findById(id);
+
+    return updatedUser; // Or return saveProducts based on your requirements.
+};
