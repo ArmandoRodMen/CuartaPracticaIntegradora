@@ -9323,3 +9323,390 @@
   level: 'information',
   timestamp: '2024-02-21T15:44:13.705Z'
 }
+{
+  message: 'Escuchando puerto 8080 con logger',
+  level: 'information',
+  timestamp: '2024-02-21T16:03:15.265Z'
+}
+{
+  message: 'Test error',
+  level: 'error',
+  timestamp: '2024-02-21T16:03:15.267Z'
+}
+{
+  message: 'Conectado a la DB',
+  level: 'information',
+  timestamp: '2024-02-21T16:03:16.193Z'
+}
+{
+  message: 'Escuchando puerto 8080 con logger',
+  level: 'information',
+  timestamp: '2024-02-21T16:28:12.720Z'
+}
+{
+  message: 'Test error',
+  level: 'error',
+  timestamp: '2024-02-21T16:28:12.722Z'
+}
+{
+  message: 'Conectado a la DB',
+  level: 'information',
+  timestamp: '2024-02-21T16:28:13.615Z'
+}
+{
+  message: 'Escuchando puerto 8080 con logger',
+  level: 'information',
+  timestamp: '2024-02-21T16:28:47.895Z'
+}
+{
+  message: 'Test error',
+  level: 'error',
+  timestamp: '2024-02-21T16:28:47.897Z'
+}
+{
+  message: 'Conectado a la DB',
+  level: 'information',
+  timestamp: '2024-02-21T16:28:48.658Z'
+}
+{
+  message: 'Escuchando puerto 8080 con logger',
+  level: 'information',
+  timestamp: '2024-02-21T16:33:16.763Z'
+}
+{
+  message: 'Test error',
+  level: 'error',
+  timestamp: '2024-02-21T16:33:16.765Z'
+}
+{
+  message: 'Conectado a la DB',
+  level: 'information',
+  timestamp: '2024-02-21T16:33:17.682Z'
+}
+{
+  message: 'Escuchando puerto 8080 con logger',
+  level: 'information',
+  timestamp: '2024-02-21T16:36:04.618Z'
+}
+{
+  message: 'Test error',
+  level: 'error',
+  timestamp: '2024-02-21T16:36:04.620Z'
+}
+{
+  message: 'Conectado a la DB',
+  level: 'information',
+  timestamp: '2024-02-21T16:36:05.563Z'
+}
+{
+  message: 'Escuchando puerto 8080 con logger',
+  level: 'information',
+  timestamp: '2024-02-21T16:36:47.080Z'
+}
+{
+  message: 'Test error',
+  level: 'error',
+  timestamp: '2024-02-21T16:36:47.082Z'
+}
+{
+  message: 'Conectado a la DB',
+  level: 'information',
+  timestamp: '2024-02-21T16:36:47.844Z'
+}
+{
+  message: 'Escuchando puerto 8080 con logger',
+  level: 'information',
+  timestamp: '2024-02-21T16:39:31.792Z'
+}
+{
+  message: 'Test error',
+  level: 'error',
+  timestamp: '2024-02-21T16:39:31.794Z'
+}
+{
+  message: 'Conectado a la DB',
+  level: 'information',
+  timestamp: '2024-02-21T16:39:32.852Z'
+}
+{
+  message: 'Escuchando puerto 8080 con logger',
+  level: 'information',
+  timestamp: '2024-02-21T16:41:37.794Z'
+}
+{
+  message: 'Test error',
+  level: 'error',
+  timestamp: '2024-02-21T16:41:37.796Z'
+}
+{
+  message: 'Conectado a la DB',
+  level: 'information',
+  timestamp: '2024-02-21T16:41:38.682Z'
+}
+{
+  message: 'Escuchando puerto 8080 con logger',
+  level: 'information',
+  timestamp: '2024-02-21T16:41:59.279Z'
+}
+{
+  message: 'Test error',
+  level: 'error',
+  timestamp: '2024-02-21T16:41:59.281Z'
+}
+{
+  message: 'Conectado a la DB',
+  level: 'information',
+  timestamp: '2024-02-21T16:42:00.042Z'
+}
+{
+  message: 'Escuchando puerto 8080 con logger',
+  level: 'information',
+  timestamp: '2024-02-21T16:42:34.424Z'
+}
+{
+  message: 'Test error',
+  level: 'error',
+  timestamp: '2024-02-21T16:42:34.427Z'
+}
+{
+  message: 'Conectado a la DB',
+  level: 'information',
+  timestamp: '2024-02-21T16:42:35.190Z'
+}
+{
+  message: 'Escuchando puerto 8080 con logger',
+  level: 'information',
+  timestamp: '2024-02-22T04:37:10.979Z'
+}
+{
+  message: 'Test error',
+  level: 'error',
+  timestamp: '2024-02-22T04:37:10.982Z'
+}
+{
+  message: 'Conectado a la DB',
+  level: 'information',
+  timestamp: '2024-02-22T04:37:11.964Z'
+}
+{
+  message: 'Escuchando puerto 8080 con logger',
+  level: 'information',
+  timestamp: '2024-02-22T04:41:44.373Z'
+}
+{
+  message: 'Test error',
+  level: 'error',
+  timestamp: '2024-02-22T04:41:44.375Z'
+}
+{
+  message: 'Conectado a la DB',
+  level: 'information',
+  timestamp: '2024-02-22T04:41:45.262Z'
+}
+{
+  message: 'Escuchando puerto 8080 con logger',
+  level: 'information',
+  timestamp: '2024-02-22T04:43:31.858Z'
+}
+{
+  message: 'Test error',
+  level: 'error',
+  timestamp: '2024-02-22T04:43:31.860Z'
+}
+{
+  message: 'Conectado a la DB',
+  level: 'information',
+  timestamp: '2024-02-22T04:43:32.855Z'
+}
+{
+  message: {
+    status: 'success',
+    payload: 12,
+    totalPages: 2,
+    prevPage: null,
+    nextPage: 2,
+    page: 1,
+    hasPrevPage: null,
+    hasNextPage: true,
+    prevLink: null,
+    nextLink: 'http://localhost:8080/api/products?page=2'
+  },
+  level: 'information',
+  timestamp: '2024-02-22T04:44:20.487Z'
+}
+{
+  message: 'Escuchando puerto 8080 con logger',
+  level: 'information',
+  timestamp: '2024-02-22T04:45:20.748Z'
+}
+{
+  message: 'Test error',
+  level: 'error',
+  timestamp: '2024-02-22T04:45:20.751Z'
+}
+{
+  message: 'Conectado a la DB',
+  level: 'information',
+  timestamp: '2024-02-22T04:45:21.685Z'
+}
+{
+  message: 'Escuchando puerto 8080 con logger',
+  level: 'information',
+  timestamp: '2024-02-22T04:46:43.008Z'
+}
+{
+  message: 'Test error',
+  level: 'error',
+  timestamp: '2024-02-22T04:46:43.011Z'
+}
+{
+  message: 'Conectado a la DB',
+  level: 'information',
+  timestamp: '2024-02-22T04:46:43.969Z'
+}
+{
+  message: 'Escuchando puerto 8080 con logger',
+  level: 'information',
+  timestamp: '2024-02-22T04:51:01.993Z'
+}
+{
+  message: 'Test error',
+  level: 'error',
+  timestamp: '2024-02-22T04:51:01.996Z'
+}
+{
+  message: 'Conectado a la DB',
+  level: 'information',
+  timestamp: '2024-02-22T04:51:02.912Z'
+}
+{
+  message: 'Escuchando puerto 8080 con logger',
+  level: 'information',
+  timestamp: '2024-02-22T04:51:22.593Z'
+}
+{
+  message: 'Test error',
+  level: 'error',
+  timestamp: '2024-02-22T04:51:22.596Z'
+}
+{
+  message: 'Conectado a la DB',
+  level: 'information',
+  timestamp: '2024-02-22T04:51:23.350Z'
+}
+{
+  message: {
+    status: 'success',
+    payload: 12,
+    totalPages: 2,
+    prevPage: null,
+    nextPage: 2,
+    page: 1,
+    hasPrevPage: null,
+    hasNextPage: true,
+    prevLink: null,
+    nextLink: 'http://localhost:8080/api/products?page=2'
+  },
+  level: 'information',
+  timestamp: '2024-02-22T04:51:44.716Z'
+}
+{
+  level: 'information',
+  message: 'jwt: ',
+  timestamp: '2024-02-22T04:51:58.096Z'
+}
+{
+  message: 'Escuchando puerto 8080 con logger',
+  level: 'information',
+  timestamp: '2024-02-22T04:52:38.424Z'
+}
+{
+  message: 'Test error',
+  level: 'error',
+  timestamp: '2024-02-22T04:52:38.427Z'
+}
+{
+  message: 'Conectado a la DB',
+  level: 'information',
+  timestamp: '2024-02-22T04:52:39.295Z'
+}
+{
+  message: {
+    status: 'success',
+    payload: 12,
+    totalPages: 2,
+    prevPage: null,
+    nextPage: 2,
+    page: 1,
+    hasPrevPage: null,
+    hasNextPage: true,
+    prevLink: null,
+    nextLink: 'http://localhost:8080/api/products?page=2'
+  },
+  level: 'information',
+  timestamp: '2024-02-22T04:52:57.677Z'
+}
+{
+  message: {
+    status: 'success',
+    payload: 12,
+    totalPages: 2,
+    prevPage: null,
+    nextPage: 2,
+    page: 1,
+    hasPrevPage: null,
+    hasNextPage: true,
+    prevLink: null,
+    nextLink: 'http://localhost:8080/api/products?page=2'
+  },
+  level: 'information',
+  timestamp: '2024-02-22T04:54:40.711Z'
+}
+{
+  message: {
+    status: 'success',
+    payload: 12,
+    totalPages: 2,
+    prevPage: null,
+    nextPage: 2,
+    page: 1,
+    hasPrevPage: null,
+    hasNextPage: true,
+    prevLink: null,
+    nextLink: 'http://localhost:8080/api/products?page=2'
+  },
+  level: 'information',
+  timestamp: '2024-02-22T04:55:46.815Z'
+}
+{
+  message: {
+    status: 'success',
+    payload: 12,
+    totalPages: 2,
+    prevPage: null,
+    nextPage: 2,
+    page: 1,
+    hasPrevPage: null,
+    hasNextPage: true,
+    prevLink: null,
+    nextLink: 'http://localhost:8080/api/products?page=2'
+  },
+  level: 'information',
+  timestamp: '2024-02-22T04:59:03.628Z'
+}
+{
+  message: {
+    status: 'success',
+    payload: 12,
+    totalPages: 2,
+    prevPage: null,
+    nextPage: 2,
+    page: 1,
+    hasPrevPage: null,
+    hasNextPage: true,
+    prevLink: null,
+    nextLink: 'http://localhost:8080/api/products?page=2'
+  },
+  level: 'information',
+  timestamp: '2024-02-22T04:59:23.974Z'
+}

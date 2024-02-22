@@ -47,6 +47,7 @@ import { authMiddleware } from '../middlewares/auth.middleware.js';
         //passport.authenticate('jwt', { session: false })(req, res, async () => {
             //authMiddleware(['admin', 'premium'])(req, res, async () => {
                 const { title, description, code, price, stock } = req.body;
+                console.log("Entrando a create product",req.body);
                 if (!title || !description || !code || !price) {
                     return res.status(400).json({ message: "Required data is missing" });
                 }

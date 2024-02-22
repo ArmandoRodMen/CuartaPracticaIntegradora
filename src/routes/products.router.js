@@ -15,11 +15,10 @@ router.get("/:idProduct", findProductById);
 router.put("/:idProduct", updateProductById);
 router.post("/", createProduct);
 router.delete("/:idProduct", deleteProduct);
-router.post("/upload", 
-  upload.fields([
-    {name: "thumbnail", maxCount: 3}
+/*router.post("/documents",     upload.fields([
+  {name: "profiles", maxCount: 3},
+
   ]), 
-  saveProduct
-);
+saveProduct);*/
 
 export default router;

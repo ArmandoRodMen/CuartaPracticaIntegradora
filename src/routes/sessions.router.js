@@ -68,17 +68,10 @@ try {
     const userId = user.id;
     console.log("userId", userId);
 
-    /*
-    const sessionInfo = (email === "adminCoder@coder.com" && password === "adminCod3r123")
-        ? { email, first_name: user.first_name, isAdmin: true, isUser: false, userId}
-        : { email, first_name: user.first_name, isAdmin: false, isUser: true, userId };
-    req.session.user = sessionInfo;
+    await usersDao.updateOne({ _id: userId }, { lastConnection: Date.now() });
 
-    res.redirect(`/profile/${userId}`);
-    */
     const {first_name, last_name, role} = user; 
     const token = generateToken({first_name, last_name, email, role});
-    //res.json({message: "Token", token});
     
     res
         .status(200)
@@ -109,29 +102,6 @@ router.get(
     }
 );
 
-
-/*
-// SIGNUP - LOGIN - PASSPORT LOCAL
-
-    
-    router.post(
-        "/signup",
-        passport.authenticate("signup", {
-        successRedirect: "/products",
-        failureRedirect: "/error",
-        })
-    );
-    
-    router.post(
-        "/login",
-        passport.authenticate("login", {
-        successRedirect: "/products",
-        failureRedirect: "/error",
-        })
-    );
-    
-*/
-
     // SIGNUP - LOGIN - PASSPORT GITHUB
     
     router.get(
@@ -158,11 +128,23 @@ router.get(
         }
         );
 
-router.get("/signout", (req, res)=>{
-    req.session.destroy(()=>{
-        res.redirect("/login");
+    router.get("/:idUser/signout", async (req, res) => {
+        const { idUser } = req.params;
+        console.log("signout",idUser);
+        try {
+            // Actualiza el campo lastConnection del usuario
+            await usersDao.updateOne({ _id: idUser }, { lastConnection: Date.now() });
+            // Luego cierra la sesión
+            req.session.destroy(() => {
+                res.redirect("/login");
+            });
+        } catch (error) {
+            console.error("Error actualizando lastConnection en signout:", error);
+            req.session.destroy(() => {
+                res.redirect("/login");
+            });
+        }
     });
-});
 
 router.post("/restaurar", async(req, res)=>{
     const {email, password} = req.body;
@@ -183,29 +165,3 @@ router.post("/restaurar", async(req, res)=>{
 
 
 export default router;
-
-
-
-/*
-import { Router } from "express";
-
-const router = Router();
-
-router.post("/signup", );
-router.post("/login", );
-router.get("/current", );
-
-// SIGNUP - LOGIN - PASSPORT GITHUB
-router.get("/auth/github",);
-router.get("/callback", );
-
-// SIGNUP - LOGIN - PASSPORT GOOGLE
-
-router.get('/auth/google', );
-router.get( '/auth/google/callback', );
-router.get("/signout", );
-router.post("/restaurar", );
-
-
-export default router;
-*/

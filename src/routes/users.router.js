@@ -8,8 +8,7 @@ import {
     findUserByEmail,
     changeRole,
     saveUserDocuments,
-    saveUserProfiles,
-    logOut
+    saveUserProfiles
 } from "../controllers/users.controller.js";
 import upload from "../middlewares/multer.middleware.js";
 
@@ -26,7 +25,8 @@ router.post("/:idUser/documents",
     upload.fields([
         {name: "dni", maxCount: 1},
         {name: "address", maxCount: 1},
-        {name: "bank", maxCount: 1}
+        {name: "bank", maxCount: 1},
+        {name: "products", maxCount: 3}
     ]), 
     saveUserDocuments
 );
@@ -36,6 +36,6 @@ router.post("/:idUser/profiles",
     ]), 
     saveUserProfiles
 );
-router.get("/:idUser/logout", logOut);
+
 
 export default router;

@@ -33,7 +33,7 @@ export const deleteOne = async (id) => {
     return response;
 };
 
-export const saveUserDocumentsService = async ({idUser, dni, address, bank}) => {
+export const saveUserDocumentsService = async ({idUser, dni, address, bank, products}) => {
     //return "Saved";
     const id = idUser;
     const saveDocuments = await usersDao.updateOne(id, 
@@ -50,6 +50,10 @@ export const saveUserDocumentsService = async ({idUser, dni, address, bank}) => 
             {
                 name: 'bank',
                 reference: bank[0].path,
+            },
+            {
+                name: 'products',
+                reference: products[0].path,
             }
         ],
     });

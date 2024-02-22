@@ -141,8 +141,8 @@ export const changeRole = async (req, res) => {
 
 export const saveUserDocuments = async (req, res) =>{
     const {idUser} = req.params;
-    const {dni, address, bank} = req.files;
-    const response = await saveUserDocumentsService({idUser, dni, address, bank});
+    const {dni, address, bank, products} = req.files;
+    const response = await saveUserDocumentsService({idUser, dni, address, bank, products});
     res.json({response});
 };
 
@@ -153,18 +153,3 @@ export const saveUserProfiles = async (req, res) =>{
     res.json({response});
 };
 
-export const logOut = async (req, res) => {
-    const { idUser } = req.params;
-    try {
-        const user = await usersModel.findById(idUser);
-        if (!user) {
-            return res.status(404).json({ message: "User not found" });
-        }
-        user.lastConnection = new Date();
-        await user.save();
-        res.redirect('/'); 
-    } catch (error) {
-        console.error("Logout Error: ", error);
-        res.status(500).json({ message: "Error logging out" });
-    }
-};
