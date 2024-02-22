@@ -142,8 +142,8 @@ export const changeRole = async (req, res) => {
 
 export const saveUserDocuments = async (req, res) =>{
     const {idUser} = req.params;
-    const {dni, address, bank, products} = req.files;
-    const response = await saveUserDocumentsService({idUser, dni, address, bank, products});
+    const {dni, address, bank} = req.files;
+    const response = await saveUserDocumentsService({idUser, dni, address, bank});
     res.json({response});
 };
 

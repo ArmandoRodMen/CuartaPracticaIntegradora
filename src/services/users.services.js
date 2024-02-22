@@ -33,7 +33,7 @@ export const deleteOne = async (id) => {
     return response;
 };
 
-export const saveUserDocumentsService = async ({idUser, dni, address, bank, products}) => {
+export const saveUserDocumentsService = async ({idUser, dni, address, bank}) => {
     //return "Saved";
     const id = idUser;
     const saveDocuments = await usersDao.updateOne(id, 
@@ -50,10 +50,6 @@ export const saveUserDocumentsService = async ({idUser, dni, address, bank, prod
             {
                 name: 'bank',
                 reference: bank[0].path,
-            },
-            {
-                name: 'products',
-                reference: products[0].path,
             }
         ],
     });
@@ -81,13 +77,10 @@ export const saveUserProductsService = async ({ idUser, products }) => {
         reference: product.path 
     }));
 
-    // Using updateOne instead of findByIdAndUpdate
     const saveProducts = await usersDao.updateOne(id, {
         $set: { products: productReferences }
     });
 
-    // Since updateOne doesn't return the updated document by default,
-    // you might want to fetch the updated user separately if needed.
     const updatedUser = await usersDao.findById(id);
 
     return updatedUser; // Or return saveProducts based on your requirements.

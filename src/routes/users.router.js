@@ -26,8 +26,7 @@ router.post("/:idUser/documents",
     upload.fields([
         {name: "dni", maxCount: 1},
         {name: "address", maxCount: 1},
-        {name: "bank", maxCount: 1},
-        {name: "products", maxCount: 3}
+        {name: "bank", maxCount: 1}
     ]), 
     saveUserDocuments
 );
